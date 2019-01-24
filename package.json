@@ -1,0 +1,37 @@
+{
+  "name": "config-schema",
+  "version": "0.0.1-alpha",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "ava-ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "ava": "^1.1.0",
+    "ava-ts": "^0.25.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@creditkarma/consul-client": "^0.8.3",
+    "@types/js-base64": "^2.3.1",
+    "js-base64": "^2.5.1",
+    "typed-rest-client": "^1.0.11"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}

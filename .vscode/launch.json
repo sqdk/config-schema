@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run AVA test (no concurrency)",
+            "program": "${workspaceRoot}/node_modules/ava/profile.js",
+            "args": [
+              "${file}",
+              "--serial"
+            ],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "Run AVA test",
+            "program": "${workspaceRoot}/node_modules/ava/profile.js",
+            "args": [
+              "${file}"
+            ],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
+        },
+    ]
+  }
